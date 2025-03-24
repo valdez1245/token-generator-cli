@@ -1,0 +1,6 @@
+.vercel
+.docker/
+node_modules/
+*.log
+backend/.env
+
