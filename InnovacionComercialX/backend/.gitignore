@@ -1,0 +1,27 @@
+# Ignorar node_modules, que contiene las dependencias del proyecto
+node_modules/
+
+# Ignorar archivos de configuración de IDE
+.vscode/
+.idea/
+
+# Ignorar archivos de log
+*.log
+
+# Ignorar el archivo .env (contiene información sensible)
+.env
+
+# Ignorar archivos de sistema operativo (MacOS, Windows)
+.DS_Store
+Thumbs.db
+
+# Ignorar el directorio de compilados y archivos generados
+dist/
+build/
+
+# Ignorar los archivos de test temporales
+coverage/
+
+# Ignorar archivos temporales de editores (como vim, emacs, etc.)
+*~
+*.swp
