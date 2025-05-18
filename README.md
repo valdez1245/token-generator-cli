@@ -15,3 +15,4 @@ gen-token '{"user_id":123,"role":"admin"}'
 ```
 
 # token-generator-cli
+# token-generator-cli
