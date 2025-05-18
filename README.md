@@ -1,18 +1,28 @@
 # Token Generator CLI
 
-CLI para generar tokens JWT personalizados usando Node.js.
+CLI simple para generar y gestionar tokens de forma segura.
 
-## Instalación global
-
-```bash
-npm install -g .
-```
-
-## Uso
+## 🚀 Instalación
 
 ```bash
-gen-token '{"user_id":123,"role":"admin"}'
+git clone https://github.com/valdez1245/token-generator-cli.git
+cd token-generator-cli
+npm install
 ```
 
-# token-generator-cli
-# token-generator-cli
+## ⚙️ Uso
+
+```bash
+node index.js
+```
+
+> Asegúrate de tener configurado un archivo `.env` si es necesario.
+
+## 📦 Dependencias
+
+- Node.js
+- dotenv (opcional)
+
+## 📄 Licencia
+
+MIT
