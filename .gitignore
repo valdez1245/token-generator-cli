@@ -1,0 +1,4 @@
+node_modules/
+.env
+token_*.txt
+payload_*.json
