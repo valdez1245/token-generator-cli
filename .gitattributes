@@ -1,0 +1,26 @@
+# Normaliza finales de línea a LF para todos los archivos de texto
+* text=auto
+
+# Archivos de código comunes
+*.js text diff=javascript
+*.json text
+*.md text
+*.sh text eol=lf
+*.yml text
+*.yaml text
+
+# Archivos de configuración y entorno
+*.env text
+*.example text
+
+# Evita diferencias de permisos en archivos ejecutables
+*.sh eol=lf text
+*.bat text
+
+# Forzar los binarios a tratarse como binarios
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary

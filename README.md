@@ -1,28 +1,21 @@
-# Token Generator CLI
+# 🔐 Token Generator CLI
 
-CLI simple para generar y gestionar tokens de forma segura.
+Una herramienta de línea de comandos (CLI) simple para generar tokens aleatorios y seguros. Ideal para claves API, contraseñas, autenticadores y más.
 
-## 🚀 Instalación
+---
+
+## 🚀 Características
+
+- Genera uno o múltiples tokens aleatorios.
+- Personaliza la longitud de los tokens.
+- Guarda los tokens generados en un archivo de texto.
+- Soporte para CLI simple y amigable.
+
+---
+
+## ⚙️ Instalación
 
 ```bash
-git clone https://github.com/valdez1245/token-generator-cli.git
+git clone https://github.com/ACSERNE/token-generator-cli.git
 cd token-generator-cli
 npm install
-```
-
-## ⚙️ Uso
-
-```bash
-node index.js
-```
-
-> Asegúrate de tener configurado un archivo `.env` si es necesario.
-
-## 📦 Dependencias
-
-- Node.js
-- dotenv (opcional)
-
-## 📄 Licencia
-
-MIT

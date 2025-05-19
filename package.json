@@ -1,19 +1,25 @@
 {
   "name": "token-generator-cli",
   "version": "1.0.0",
-  "description": "CLI para generar tokens JWT personalizados",
+  "description": "CLI para generar tokens aleatorios",
   "main": "index.js",
-  "bin": {
-    "gen-token": "./index.js"
-  },
+  "type": "module",
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": ["jwt", "cli", "token", "generator"],
-  "author": "",
+  "bin": {
+    "token-generator": "./index.js"
+  },
+  "keywords": [
+    "cli",
+    "token",
+    "generator",
+    "nodejs"
+  ],
+  "author": "ACSERNE",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^16.3.1",
-    "jsonwebtoken": "^9.0.2"
+    "commander": "^11.0.0",
+    "dotenv": "^16.5.0"
   }
 }
