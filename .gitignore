@@ -1,3 +1,4 @@
+# .gitignore
 node_modules/
 .env
 .env.local
@@ -10,3 +11,4 @@ yarn-debug.log*
 yarn-error.log*
 .idea/
 .vscode/
+
