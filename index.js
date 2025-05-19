@@ -1,34 +1,26 @@
 #!/usr/bin/env node
 
-const jwt = require("jsonwebtoken");
-const fs = require("fs");
-require("dotenv").config();
+// index.js
+import crypto from 'crypto';
 
-const secret = process.env.JWT_SECRET;
+// Longitud del token por defecto
+const DEFAULT_LENGTH = 32;
+
+// Función para generar token seguro
+function generateToken(length = DEFAULT_LENGTH) {
+  return crypto.randomBytes(length).toString('hex');
+}
+
+// Leer argumentos desde la CLI
 const args = process.argv.slice(2);
+const length = args[0] ? parseInt(args[0], 10) : DEFAULT_LENGTH;
 
-if (!secret) {
-  console.error("❌ JWT_SECRET no definido en el archivo .env");
+// Validar longitud
+if (isNaN(length) || length <= 0) {
+  console.error('❌ Longitud inválida. Usa un número entero positivo.');
   process.exit(1);
 }
 
-if (args.length === 0) {
-  console.error("❌ Debes proporcionar un payload JSON");
-  process.exit(1);
-}
-
-let payload;
-try {
-  payload = JSON.parse(args[0]);
-} catch (err) {
-  console.error("❌ Payload inválido. Asegúrate de pasar un JSON válido.");
-  process.exit(1);
-}
-
-const token = jwt.sign(payload, secret, { expiresIn: "1h" });
-const timestamp = Date.now();
-const fileName = `token_${timestamp}.txt`;
-fs.writeFileSync(fileName, token);
-
-console.log(`✅ Token generado y guardado en ${fileName}`);
-
+// Generar y mostrar el token
+const token = generateToken(length);
+console.log(`🔐 Token generado (${length} bytes):\n${token}`);
